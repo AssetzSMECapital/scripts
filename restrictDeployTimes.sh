@@ -7,17 +7,17 @@ echo "Day: $d"
 echo "Hour: $h"
 bypassExpedite="false"
 
-if (($d <= 4)) ; then
+if ((d <= 4)) ; then
     echo "Mon/Tues/Wed/Thurs"
-    if (($h >= 8 && $h < 16)) ; then
+    if ((h >= 8 && h < 16)) ; then
         echo "Work day"
         bypassExpedite="true"
     else
         echo "Out of office hours"
     fi
-elif (($d == 5)) ; then
+elif ((d == 5)) ; then
     echo "Fri"
-    if (($h >= 8 && $h < 14)) ; then
+    if ((h >= 8 && h < 14)) ; then
         echo "Work day"
         bypassExpedite="true"
     else
